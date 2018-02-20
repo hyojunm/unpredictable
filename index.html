@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Unpredictable Random Generators</title>
+	<link rel="icon" type="32x32" href="./img/logo.jpg">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<ol class="breadcrumb">
+			<h3>THE UNPREDICTABLE <i style="font-size: 1.5rem;">Random Generators (Desktop Version)</i></h3>
+		  <li class="breadcrumb-item"><a href="#home">Home</a></li>
+		  <li class="breadcrumb-item"><a href="#number">Random Number Generator</a></li>
+		  <li class="breadcrumb-item"><a href="#color">Random Color Picker</a></li>
+		  <li class="breadcrumb-item"><a href="#credits">Credits</a></li>
+		  <li class="breadcrumb-item active"><a href="">Mobile Version (Coming Soon)</a></li>
+		</ol>
+
+		<div id="home">
+			<center>
+				<img src="img/logo.jpg">
+				<h1>The Unpredictable <i style="font-size: 3rem;">Random Generators</i></h1>
+				<h3>The Unpredictable Random Generator is a great help for you when you are having trouble picking some numbers, colors, etc. Right now The Unpredictable only has 2 generators, but soon more will come out for you.</h3>
+
+				<h4><a href="#number">Try the random number generator</a></h4>
+				<h4><a href="#color">Or try the random color picker</a></h4>
+				<h4><a href="https://github.com/hyojunm/unpredictable">View Source Code on GitHub</a></h4>
+			</center>
+		</div>
+
+		<div id="number">
+			<center>
+				<h1>Random Number Generator</h1>
+				<h4>Pick random numbers from 0 to 100</h4>
+				<button onclick="pickRandom(0, 100); this.innerHTML = 'Another Number';" id="random-btn" class="btn">Random Number</button>
+				<button onclick="hideNumber();" class="btn">Hide Number</button>
+				<p id="random"><i class="small">Random Numbers between 0 and 100</i></p>
+			</center>
+		</div>
+
+		<div id="color">
+			<center>
+				<h1>Random Color Picker</h1>
+				<h4>What's you're favorite color?</h4>
+				<button onclick="pickColor(); this.innerHTML = 'Pick One More';" id="color-btn" class="btn">Random Color</button>
+				<button onclick="hideColor();" class="btn">Hide Color</button>
+				<p id="randcolor"><i class="small">Pick Any Random Colors</i></p>
+			</center>
+		</div>
+
+		<div id="credits">
+			<center>
+				<h1>Credits</h1>
+				<p>Code and Design - Jeremy Moon</p>
+				<p>Publishing - GitHub</p>
+				<p>Logo Image - ClipArtBarn</p>
+				<h3><u>Thank you for your help!</u></h3>
+			</center>
+		</div>
+	</div>
+
+	<footer>
+		<strong>Copyright &copy; Jeremy Moon</strong>
+	</footer>
+</body>
+</html>
