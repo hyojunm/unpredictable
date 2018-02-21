@@ -46,5 +46,6 @@ function pickColor() {
 
 function hideColor() {
   document.getElementById('randcolor').innerHTML = "<i class='small'>Pick Any Random Colors</i>";
+  document.getElementById('randcolor').style.color = "black";
   document.getElementById('color-btn').innerHTML = "Random Color";
 }
