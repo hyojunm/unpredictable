@@ -23,6 +23,13 @@ $(document).ready(function(){
   });
 });
 
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
+
+
 function pickRandom(min, max) {
   document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + Math.floor(Math.random() * (max - min + 1) );
   document.getElementById('random').style.display = "block";

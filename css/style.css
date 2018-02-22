@@ -13,6 +13,10 @@ body {
   background-color: lightgreen;
 }
 
+.navbar {
+  background-color: lightgreen;
+}
+
 h1 {
   font-size: 5rem;
 }
@@ -67,23 +71,9 @@ h1 {
   transform: translateY(4px);
 }
 
-#home {
-  padding: 150px 0;
-  height: cover;
-}
-
-#number {
-  background-image: url(../img/number.jpg);
-  padding: 150px 0;
-  height: cover;
-}
-
-#color {
-  background-image: url(../img/color.jpg);
-  background-size: cover;
-  color: white; 
-  padding: 150px 0;
-  height: cover;
+#home, #number, #color, #credits {
+  padding-top: 70px;
+  height: 150vh;
 }
 
 .breadcrumb {
