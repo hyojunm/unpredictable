@@ -30,13 +30,16 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 });
 
 
-function pickRandom(min, max) {
-  document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + Math.floor(Math.random() * (max - min + 1) );
+function pickRandom() {
+  var min = document.getElementById('min').value;
+  var max = document.getElementById('max').value;
+
+  document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + Math.floor(Math.random() * (max - min + 1));
   document.getElementById('random').style.display = "block";
 }
 
 function hideNumber() {
-  document.getElementById('random').innerHTML = "<i class='small'>Random Numbers between 1 and 100</i>";
+  document.getElementById('random').innerHTML = "<i class='small'>Random Number Generator</i>";
   document.getElementById('random-btn').innerHTML = "Random Number";
 }
 
