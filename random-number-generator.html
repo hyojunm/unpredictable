@@ -34,7 +34,7 @@
       </div>
       <div class="navbar navbar-collapse collapse" id="myNavPtr" style="margin: 0; border: 0;">
         <ul class="nav navbar-nav navbar-right">
-          <li class="tab"><a href="./">Home</a></li>
+          <li class="tab"><a href="	./">Home</a></li>
           <li class="tab"><a href="random-number-generator.html">Random Number Generator</a></li>
           <li class="tab"><a href="random-color-picker.html">Random Color Picker</a></li>
         </ul>
@@ -43,28 +43,20 @@
   </nav>
 
 	<div class="container">
-		<div id="home">
+		<div id="number">
 			<center>
-				<img src="./img/logo.jpg">
-				<h1><i class="fa fa-random"></i> The Unpredictable <i style="font-size: 3rem;">Random Generators</i></h1>
-				<h3>The Unpredictable Random Generator is a great help for you when you are having trouble picking some numbers, colors, etc. Right now The Unpredictable only has 2 generators, but soon more will come out for you.</h3>
+				<img src="./img/number.png" width="30%">
+				<h1>Random Number Generator</h1>
 
-				<h4><a href="random-number-generator.html">Try the random number generator</a></h4>
-				<h4><a href="random-color-picker.html">Or try the random color picker</a></h4>
-				<h4><a href="https://github.com/hyojunm/unpredictable">View Source Code on GitHub</a></h4>
-			</center>
-		</div>
+				<h4>Pick your minimum and maximum numbers:</h4>
+				<div>
+					<p>Minimum: <input type="number" value="0" id="min"></p>
+					<p>Maximum: <input type="number" value="100" id="max"></p>
 
-		<div id="credits">
-			<center>
-				<h1>Credits</h1>
-				<p>Code and Design - Jeremy Moon</p>
-				<p>Publishing - GitHub</p>
-				<p>Logo Image - ClipArtBarn</p>
-				<p>Other Images - Wikimedia Commons, OpenClipArt</p>
-				<p>Icons - Font Awesome</p>
-				<h3><u>Thank you for your help!</u></h3>
-				<img src="./img/logo.jpg" width="50%">
+					<button onclick="pickRandom(); this.innerHTML = 'Another Number';" id="random-btn" class="btn">Random Number</button>
+					<button onclick="hideNumber();" class="btn">Hide Number</button>
+				</div>
+				<p id="random"><i class="small">Random Number Generator</i></p>
 			</center>
 		</div>
 	</div>

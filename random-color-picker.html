@@ -42,29 +42,15 @@
     </div>
   </nav>
 
-	<div class="container">
-		<div id="home">
+	<div class="container">		
+		<div id="color">
 			<center>
-				<img src="./img/logo.jpg">
-				<h1><i class="fa fa-random"></i> The Unpredictable <i style="font-size: 3rem;">Random Generators</i></h1>
-				<h3>The Unpredictable Random Generator is a great help for you when you are having trouble picking some numbers, colors, etc. Right now The Unpredictable only has 2 generators, but soon more will come out for you.</h3>
-
-				<h4><a href="random-number-generator.html">Try the random number generator</a></h4>
-				<h4><a href="random-color-picker.html">Or try the random color picker</a></h4>
-				<h4><a href="https://github.com/hyojunm/unpredictable">View Source Code on GitHub</a></h4>
-			</center>
-		</div>
-
-		<div id="credits">
-			<center>
-				<h1>Credits</h1>
-				<p>Code and Design - Jeremy Moon</p>
-				<p>Publishing - GitHub</p>
-				<p>Logo Image - ClipArtBarn</p>
-				<p>Other Images - Wikimedia Commons, OpenClipArt</p>
-				<p>Icons - Font Awesome</p>
-				<h3><u>Thank you for your help!</u></h3>
-				<img src="./img/logo.jpg" width="50%">
+				<img src="./img/color.png" width="30%">
+				<h1>Random Color Picker</h1>
+				<h4>What's you're favorite color?</h4>
+				<button onclick="pickColor(); this.innerHTML = 'Pick One More';" id="color-btn" class="btn">Random Color</button>
+				<button onclick="hideColor();" class="btn">Hide Color</button>
+				<p id="randcolor"><i class="small">Pick Any Random Colors</i></p>
 			</center>
 		</div>
 	</div>

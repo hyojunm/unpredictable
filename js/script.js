@@ -34,7 +34,9 @@ function pickRandom() {
   var min = document.getElementById('min').value;
   var max = document.getElementById('max').value;
 
-  document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + Math.floor(Math.random() * (max - min + 1));
+  var random = Math.floor(Math.random() * (max - min + 1)) + 1;
+
+  document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + random;
   document.getElementById('random').style.display = "block";
 }
 
