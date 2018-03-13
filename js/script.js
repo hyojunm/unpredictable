@@ -1,43 +1,29 @@
 $(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
+  $('#random-btn').on('click', function() {
+    randomNum(); 
+    this.innerHTML = 'Another Number'; 
   });
+
+  $('#hide-btn').on('click', function() {
+    hideNumber();
+  });
+
 });
 
-$(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') ) {
-        $(this).collapse('hide');
-    }
-});
-
-
-function pickRandom() {
-  var min = document.getElementById('min').value;
+function randomNum() {
+  var min = document.getElementById('min').value - 1;
   var max = document.getElementById('max').value;
 
-  var random = Math.floor(Math.random() * (max - min + 1)) + 1;
+  if(max < min) {
+    alert("You entered a wrong range! Make sure you make your maximum number bigger than your minimum number.");
+  } else {
+    var random = Math.floor(min + (Math.random() * (max - min) + 1));
 
-  document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + random;
-  document.getElementById('random').style.display = "block";
+    document.getElementById('random').innerHTML = "<p class='small'>Your number is</p>" + random;
+    document.getElementById('random').style.display = "block";
+    return 3;
+  }
 }
 
 function hideNumber() {
@@ -46,13 +32,12 @@ function hideNumber() {
 }
 
 function pickColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
+  var colors = 
+  ["red", "orange", "yellow", "green", "lightblue", "skyblue", "blue", "purple", "pink", "violet", "indigo", "black", "white", "tomato", "powderblue"];
+
+  var color = colors[Math.floor(Math.random() * colors.length)];
   
-  document.getElementById('randcolor').innerHTML = "<p class='small'>Your color is</p>" + color;
+  document.getElementById('randcolor').innerHTML = "<p class='small'>Your color is</p>" + color.toUpperCase();
   document.getElementById('randcolor').style.color = color;
 }
 
