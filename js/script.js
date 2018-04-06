@@ -9,6 +9,15 @@ $(document).ready(function(){
     hideNumber();
   });
 
+  $("#roll-btn").on("click", function() {
+    roll();
+    $(this).html("Roll Again");
+  });
+
+  $("#hide-dice-btn").on("click", function() {
+    hideDice();
+  })
+
 });
 
 function randomNum() {
@@ -32,8 +41,7 @@ function hideNumber() {
 }
 
 function pickColor() {
-  var colors = 
-  ["red", "orange", "yellow", "green", "lightblue", "skyblue", "blue", "purple", "pink", "violet", "indigo", "black", "white", "tomato", "powderblue"];
+  var colors = ["red", "orange", "yellow", "green", "lightblue", "skyblue", "blue", "purple", "pink", "violet", "indigo", "black", "white", "tomato", "powderblue"];
 
   var color = colors[Math.floor(Math.random() * colors.length)];
   
@@ -45,4 +53,16 @@ function hideColor() {
   document.getElementById('randcolor').innerHTML = "<i class='small'>Pick Any Random Colors</i>";
   document.getElementById('randcolor').style.color = "black";
   document.getElementById('color-btn').innerHTML = "Random Color";
+}
+
+function roll() {
+  var dice = ['./img/dice-1.png', './img/dice-2.png', './img/dice-3.png', './img/dice-4.png', './img/dice-5.png', './img/dice-6.png'];
+
+  var result = dice[Math.floor(Math.random() * dice.length)];
+
+  $("#dice").html("<img src='" + result + "' width='50%' alt='Dice Image'>");
+}
+
+function hideDice() {
+  $("#roll").find("#dice").html("<i class='small'>Roll the Dice</i>").end().find("#roll-btn").html("Roll!")
 }

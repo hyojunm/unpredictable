@@ -41,6 +41,16 @@ h1 {
   line-height: 1;
 }
 
+#dice {
+  display: block;
+  border: 2px solid black;
+  padding: 3rem;
+  font-size: 10rem;
+  width: 100%;
+  height: cover;
+  line-height: 1;
+}
+
 .small {
 	font-size: 25%;
 }
@@ -71,7 +81,7 @@ h1 {
   transform: translateY(4px);
 }
 
-#home, #number, #color, #credits {
+#home, #number, #color, #credits, #roll {
   padding: 70px 0;
   height: cover;
 }
